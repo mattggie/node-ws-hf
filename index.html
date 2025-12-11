@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>AquaGuard - Protect Our Water Resources</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,13 +14,15 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
+            --primary: #1a73e8;
+            --secondary: #34a853;
+            --accent: #4285f4;
+            --light: #e8f4fd;
+            --dark: #0d47a1;
             --text: #333333;
             --white: #ffffff;
+            --water-blue: #1e88e5;
+            --ocean-blue: #0066cc;
         }
 
         body {
@@ -30,7 +32,7 @@
         }
 
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--primary), var(--water-blue));
             color: var(--white);
             padding: 1rem 0;
             position: sticky;
@@ -82,7 +84,7 @@
         }
 
         nav ul li a:hover {
-            color: var(--accent);
+            color: var(--light);
         }
 
         nav ul li a::after {
@@ -92,7 +94,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--accent);
+            background-color: var(--light);
             transition: width 0.3s ease;
         }
 
@@ -101,7 +103,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 60, 100, 0.7), rgba(0, 40, 80, 0.5)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -129,7 +131,7 @@
 
         .btn {
             display: inline-block;
-            background-color: var(--accent);
+            background-color: var(--secondary);
             color: var(--white);
             padding: 0.8rem 2rem;
             border-radius: 50px;
@@ -142,9 +144,17 @@
         }
 
         .btn:hover {
-            background-color: var(--primary);
+            background-color: var(--water-blue);
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-water {
+            background-color: var(--water-blue);
+        }
+
+        .btn-water:hover {
+            background-color: var(--dark);
         }
 
         section {
@@ -304,8 +314,83 @@
             margin-bottom: 1.5rem;
         }
 
+        .water-facts {
+            background-color: #f0f9ff;
+        }
+
+        .facts-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .fact-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--water-blue);
+        }
+
+        .fact-item h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .fact-item i {
+            color: var(--water-blue);
+        }
+
+        .conservation-tips {
+            background-color: var(--white);
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .tip-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .tip-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--water-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .tip-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .tip-card h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
         .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--primary), var(--water-blue));
             color: var(--white);
             text-align: center;
             padding: 5rem 0;
@@ -330,7 +415,7 @@
         }
 
         .cta .btn:hover {
-            background-color: var(--accent);
+            background-color: var(--secondary);
             color: var(--white);
         }
 
@@ -438,6 +523,14 @@
             .stats {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .facts-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -486,11 +579,42 @@
             .stats {
                 grid-template-columns: 1fr;
             }
+            
+            .tips-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Animation for stats counter */
         .counter {
             transition: all 0.5s ease;
+        }
+        
+        /* Water wave animation */
+        .water-wave {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .water-wave::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 40%;
+            animation: wave 10s infinite linear;
+        }
+        
+        @keyframes wave {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -499,8 +623,8 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-tint"></i>
+                <span>AquaGuard</span>
             </div>
             <nav>
                 <div class="mobile-menu">
@@ -508,10 +632,11 @@
                 </div>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">Water Crisis</a></li>
                     <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#facts">Water Facts</a></li>
+                    <li><a href="#tips">Conservation Tips</a></li>
+                    <li><a href="#get-involved">Take Action</a></li>
                 </ul>
             </nav>
         </div>
@@ -520,9 +645,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>Protect Our Most Precious Resource</h1>
+            <p>Join the global movement to conserve water, protect freshwater ecosystems, and ensure clean water access for all.</p>
+            <a href="#get-involved" class="btn">Join Our Mission</a>
         </div>
     </section>
 
@@ -530,41 +655,41 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>The Global Water Crisis</h2>
+                <p>Water scarcity affects more than 40% of the global population, and this number is projected to rise.</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1569336415963-1c9d63c46d7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Dry river bed showing water scarcity">
                 </div>
                 <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h3>Why Water Conservation Matters</h3>
+                    <p>Only 2.5% of Earth's water is freshwater, and less than 1% is accessible for human use. With growing populations and climate change, water scarcity is becoming one of the most critical challenges of our time.</p>
+                    <p>AquaGuard was founded in 2015 to address the global water crisis through education, innovation, and community action. We work with local communities, governments, and businesses to implement sustainable water management solutions.</p>
+                    <p>Our approach combines traditional conservation methods with cutting-edge technology to protect watersheds, improve water quality, and promote efficient water use in agriculture, industry, and households.</p>
+                    <a href="#initiatives" class="btn btn-water">Our Solutions</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                    <i class="fas fa-tint"></i>
+                    <h3 class="counter" data-target="780">0</h3>
+                    <p>Million Lack Clean Water</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <i class="fas fa-skull-crossbones"></i>
+                    <h3 class="counter" data-target="485000">0</h3>
+                    <p>Annual Deaths from Dirty Water</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <h3 class="counter" data-target="40">0</h3>
+                    <p>% of People Affected by Water Scarcity</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <h3 class="counter" data-target="1200">0</h3>
+                    <p>Water Conservation Projects</p>
                 </div>
             </div>
         </div>
@@ -574,39 +699,121 @@
     <section class="initiatives" id="initiatives">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>Our Water Conservation Initiatives</h2>
+                <p>Discover the key programs we're implementing worldwide to protect and conserve water resources.</p>
             </div>
             <div class="initiatives-grid">
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Water conservation in agriculture">
                     </div>
                     <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Smart Agriculture</h3>
+                        <p>Promoting drip irrigation, rainwater harvesting, and drought-resistant crops to reduce agricultural water use by up to 60%.</p>
+                        <a href="#" class="btn btn-water">Learn More</a>
                     </div>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Water purification system">
                     </div>
                     <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Clean Water Access</h3>
+                        <p>Installing water purification systems in communities without access to clean drinking water, preventing waterborne diseases.</p>
+                        <a href="#" class="btn btn-water">Learn More</a>
                     </div>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                        <img src="https://images.unsplash.com/photo-1564759224907-65b945ff4e13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Watershed protection">
                     </div>
                     <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Watershed Protection</h3>
+                        <p>Restoring and protecting natural watersheds to ensure clean water supply and prevent soil erosion and contamination.</p>
+                        <a href="#" class="btn btn-water">Learn More</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water Facts Section -->
+    <section class="water-facts" id="facts">
+        <div class="container">
+            <div class="section-title">
+                <h2>Essential Water Facts</h2>
+                <p>Understanding the facts is the first step toward making a difference in water conservation.</p>
+            </div>
+            <div class="facts-container">
+                <div class="fact-item">
+                    <h3><i class="fas fa-industry"></i> Industrial Water Use</h3>
+                    <p>Industry accounts for approximately 22% of global water consumption. In developed countries, this can be as high as 59%.</p>
+                </div>
+                <div class="fact-item">
+                    <h3><i class="fas fa-shower"></i> Household Water Consumption</h3>
+                    <p>The average American family uses more than 300 gallons of water per day at home. Approximately 70% of this is used indoors.</p>
+                </div>
+                <div class="fact-item">
+                    <h3><i class="fas fa-leaf"></i> Virtual Water</h3>
+                    <p>Producing a single cup of coffee requires about 37 gallons of water (mostly for growing the coffee beans). This is known as "virtual water."</p>
+                </div>
+                <div class="fact-item">
+                    <h3><i class="fas fa-temperature-high"></i> Climate Change Impact</h3>
+                    <p>Climate change is altering precipitation patterns, causing more frequent and severe droughts and floods, directly impacting water availability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conservation Tips Section -->
+    <section class="conservation-tips" id="tips">
+        <div class="container">
+            <div class="section-title">
+                <h2>Water Conservation Tips</h2>
+                <p>Small changes in daily habits can make a big difference in water conservation.</p>
+            </div>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <h3>Fix Leaks</h3>
+                    <p>A single dripping faucet can waste more than 3,000 gallons of water per year. Regularly check and fix leaks in your home.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-shower"></i>
+                    </div>
+                    <h3>Shorter Showers</h3>
+                    <p>Reducing your shower time by just 2 minutes can save up to 1,750 gallons of water per person annually.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-toilet"></i>
+                    </div>
+                    <h3>Efficient Toilets</h3>
+                    <p>Toilets account for nearly 30% of indoor water use. Consider installing low-flow or dual-flush toilets.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Full Loads Only</h3>
+                    <p>Run your dishwasher and washing machine only when they're full. This can save up to 1,000 gallons of water per month.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Water-Smart Landscaping</h3>
+                    <p>Choose native, drought-resistant plants for your garden and water during cooler parts of the day to reduce evaporation.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+                    <h3>Drink Tap Water</h3>
+                    <p>Bottled water production uses 6 times more water per liter than tap water. Use a reusable bottle with filtered tap water.</p>
                 </div>
             </div>
         </div>
@@ -614,10 +821,11 @@
 
     <!-- CTA Section -->
     <section class="cta" id="get-involved">
-        <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+        <div class="container water-wave">
+            <h2>Be Part of the Solution</h2>
+            <p>Every drop counts. Join our global network of water conservation advocates and help ensure clean, accessible water for future generations.</p>
+            <a href="#" class="btn">Take the Water Pledge</a>
+            <p style="margin-top: 2rem; font-size: 1rem;">Sign up for our newsletter to receive water conservation tips and updates on our projects.</p>
         </div>
     </section>
 
@@ -626,8 +834,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>AquaGuard</h3>
+                    <p>We are dedicated to protecting and conserving global water resources through education, technology, and community action.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -639,31 +847,32 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#about">Water Crisis</a></li>
                         <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#tips">Conservation Tips</a></li>
+                        <li><a href="#get-involved">Take Action</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Our Programs</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">Smart Agriculture</a></li>
+                        <li><a href="#">Clean Water Access</a></li>
+                        <li><a href="#">Watershed Protection</a></li>
+                        <li><a href="#">Urban Water Conservation</a></li>
+                        <li><a href="#">Water Policy Advocacy</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Conservation Way, Portland, OR 97201</p>
+                    <p><i class="fas fa-phone"></i> +1 (503) 555-WATER</p>
+                    <p><i class="fas fa-envelope"></i> info@aquaguard.org</p>
+                    <p><i class="fas fa-globe"></i> www.aquaguard.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2023 AquaGuard Water Conservation Initiative. All rights reserved. | <a href="#" style="color: var(--accent);">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
@@ -689,7 +898,7 @@
                     counter.innerText = Math.ceil(count + inc);
                     setTimeout(animateCounters, 1);
                 } else {
-                    counter.innerText = target;
+                    counter.innerText = target.toLocaleString();
                 }
             });
         }
@@ -712,11 +921,18 @@
                         behavior: 'smooth'
                     });
                     
+                    // Close mobile menu if open
                     document.querySelector('nav ul').classList.remove('active');
                 }
             });
         });
+
+        // Add water conservation pledge form interaction
+        document.querySelector('.cta .btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert("Thank you for your interest in taking the Water Conservation Pledge! You'll be redirected to our pledge form.");
+            // In a real implementation, this would link to an actual form
+        });
     </script>
 </body>
-
 </html>
